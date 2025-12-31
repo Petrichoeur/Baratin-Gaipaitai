@@ -1,0 +1,32 @@
+{
+  "phrase": [
+    ["L'alignement", "Le déploiement", "L'inférence", "Le fine-tuning", "La vélocité", "L'orchestration", "Le scaling", "La résilience"],
+    ["des tokens", "des agents autonomes", "des clusters sémantiques", "du deep learning", "des GPUs quantiques", "du RAG", "des modèles multimodaux", "du back-end"],
+    ["optimise la synergie", "transcende les limites", "disrupte le paradigme", "réaligne les hallucinations", "fluidifie l'agilité", "maximise le ROI", "interface le chaos", "accélère la convergence"],
+    ["sans friction.", "en mode agile.", "pour le Web3.", "à 360 degrés.", "dans le cloud.", "via blockchain.", "avec une approche holistique.", "en temps réel."]
+  ],
+  "innovation": [
+    ["Un grille-pain", "Une brosse à dents", "Un parapluie", "Un bac à litière", "Un miroir", "Un pot de fleurs", "Un canapé", "Un tire-bouchon"],
+    ["propulsé par GPT-5", "connecté en 6G", "utilisant le deep learning", "avec agents autonomes", "doté d'une conscience", "piloté par la pensée", "en mode asynchrone", "interfaçé avec Neuralink"],
+    ["qui prédit vos besoins", "pour scaler votre vie", "optimisant le sommeil", "analysant vos émotions", "automatisant le bonheur", "générant des revenus", "réduisant la latence", "décarbonant le futur"],
+    ["en temps réel.", "via abonnement SaaS.", "dans le métavers.", "pour les Gen Z.", "sans aucune utilité.", "de manière disruptive.", "grâce aux NFTs.", "pour sauver le monde."]
+  ],
+  "job": [
+    ["Chief", "Head of", "Principal", "Lead", "VP of", "Senior", "Global", "Creative"],
+    ["Generative", "Stochastic", "Neural", "Prompt", "Algorithmic", "Data", "Cloud", "Digital"],
+    ["Evangelist", "Ninja", "Architect", "Shaman", "Growth Hacker", "Strategist", "Officer", "Visionary"],
+    ["of Disruption", "of AI Ethics", "of Synergies", "of Hallucinations", "of Ecosystems", "of Web4", "of Performance", "of Vibes"]
+  ],
+  "tool": [
+    ["Nexa", "Flow", "Hyper", "Mind", "Data", "Sync", "Neuro", "Auto"],
+    ["ly", ".ai", "ify", "Hub", "Node", "Flow", "Core", "Nexus"],
+    [" qui automatise", " qui disrupte", " qui scale", " qui réinvente", " qui connecte", " qui fragmente", " qui génère", " qui booste"],
+    ["votre café du matin.", "les réunions Zoom.", "le vide sémantique.", "le churn utilisateur.", "les pipelines de data.", "vos rêves lucides.", "le prompt engineering.", "la paresse humaine."]
+  ],
+  "model": [
+    ["Llama", "Giga", "Mistral", "Deep", "Falcon", "Chimera", "Omega", "Cyber"],
+    ["-42", "-Turbo", "-Max", "-Ultra", "-Vision", "-Quantum", "-Nano", "-Omega"],
+    [" v2.5", " (Alpha)", " (Quantized)", " Pro", " Plus", " Enterprise", " MoE", " Experimental"],
+    ["- 700B", "- Lightweight", "- Uncensored", "- Multi-modal", "- Real-time", "- Edge-native", "- Long-context", "- No-code"]
+  ]
+}
