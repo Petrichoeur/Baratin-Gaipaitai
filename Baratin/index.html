@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Baratin-GéPéTé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Baratin-GéPéTé<</h1>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>💬 Phrase-GéPéTé </h3>
+            <div id="display-phrase" class="display">...</div>
+            <button onclick="generate('phrase')">Générer phrase du turfu</button>
+        </div>
+        <div class="card">
+            <h3>💡 Innovation-GéPéTé </h3>
+            <div id="display-innovation" class="display">...</div>
+            <button onclick="generate('innovation')">Découvre la prochaine vibe </button>
+        </div>
+        <div class="card">
+            <h3>👔 Job</h3>
+            <div id="display-job" class="display">...</div>
+            <button onclick="generate('job')"> #OpenToWork </button>
+        </div>
+        <div class="card">
+            <h3>🛠️ Tool</h3>
+            <div id="display-tool" class="display">...</div>
+            <button onclick="generate('tool')"> Scale tes process </button>
+        </div>
+        <div class="card">
+            <h3>🧠 Model</h3>
+            <div id="display-model" class="display">...</div>
+            <button onclick="generate('model')"> Révolutionne le vide </button>
+        </div>
+
+        <div class="card pitch-section">
+            <h2>🚀 Le Pitch Ultime</h2>
+            <div id="pitch-text">Cliquez pour pitcher votre startup...</div>
+            <button onclick="generatePitch()" style="border-color: var(--neon-purple); color: var(--neon-purple);">Générer le Pitch</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
