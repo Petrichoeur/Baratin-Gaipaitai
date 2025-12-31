@@ -2,47 +2,76 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Baratin-GéPéTé</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baratin-Gépété | AI Bullshit Engine</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="glow-bg"></div>
+
     <header>
-        <h1>Baratin-GéPéTé<</h1>
+        <div class="logo">
+            <span class="logo-icon">🤖</span>
+            <h1>Baratin-Gépété</h1>
+        </div>
+        <p class="tagline">Générateur de non-sens algorithmique pour briller en société.</p>
     </header>
 
-    <div class="grid">
-        <div class="card">
-            <h3>💬 Phrase-GéPéTé </h3>
-            <div id="display-phrase" class="display">...</div>
-            <button onclick="generate('phrase')">Générer phrase du turfu</button>
-        </div>
-        <div class="card">
-            <h3>💡 Innovation-GéPéTé </h3>
-            <div id="display-innovation" class="display">...</div>
-            <button onclick="generate('innovation')">Découvre la prochaine vibe </button>
-        </div>
-        <div class="card">
-            <h3>👔 Job</h3>
-            <div id="display-job" class="display">...</div>
-            <button onclick="generate('job')"> #OpenToWork </button>
-        </div>
-        <div class="card">
-            <h3>🛠️ Tool</h3>
-            <div id="display-tool" class="display">...</div>
-            <button onclick="generate('tool')"> Scale tes process </button>
-        </div>
-        <div class="card">
-            <h3>🧠 Model</h3>
-            <div id="display-model" class="display">...</div>
-            <button onclick="generate('model')"> Révolutionne le vide </button>
-        </div>
+    <main class="container">
+        <section class="pitch-hero">
+            <div class="card pitch-card">
+                <div class="card-header">
+                    <span class="badge">PRO MODE</span>
+                    <h2>🚀 Le Pitch de Startup</h2>
+                </div>
+                <div class="display-container">
+                    <div id="pitch-text" class="display italic">Cliquez pour générer une licorne...</div>
+                </div>
+                <div class="actions">
+                    <button onclick="generatePitch()" class="btn btn-primary">Lever des fonds</button>
+                    <button onclick="copyToClipboard('pitch-text')" class="btn btn-outline">Copier</button>
+                </div>
+            </div>
+        </section>
 
-        <div class="card pitch-section">
-            <h2>🚀 Le Pitch Ultime</h2>
-            <div id="pitch-text">Cliquez pour pitcher votre startup...</div>
-            <button onclick="generatePitch()" style="border-color: var(--neon-purple); color: var(--neon-purple);">Générer le Pitch</button>
-        </div>
-    </div>
+        <section class="grid">
+            <div class="card">
+                <h3>💬 Phrase Disruptive</h3>
+                <div id="display-phrase" class="display mono">...</div>
+                <button onclick="generate('phrase')" class="btn btn-sm">Générer</button>
+            </div>
+
+            <div class="card">
+                <h3>💡 Innovation Inutile</h3>
+                <div id="display-innovation" class="display mono">...</div>
+                <button onclick="generate('innovation')" class="btn btn-sm">Innover</button>
+            </div>
+
+            <div class="card">
+                <h3>👔 Job à 100k€</h3>
+                <div id="display-job" class="display mono">...</div>
+                <button onclick="generate('job')" class="btn btn-sm">Recruter</button>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ SaaS Inexistant</h3>
+                <div id="display-tool" class="display mono">...</div>
+                <button onclick="generate('tool')" class="btn btn-sm">Lancer</button>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Modèle LLM</h3>
+                <div id="display-model" class="display mono">...</div>
+                <button onclick="generate('model')" class="btn btn-sm">Entraîner</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Certifié 100% sans intelligence humaine. <a href="https://github.com" target="_blank">GitHub</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
