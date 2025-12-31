@@ -1,7 +1,7 @@
 let data = {};
 
 // Charger le JSON
-fetch('data.json')
+fetch('Baratin/data.json')
     .then(res => res.json())
     .then(json => {
         data = json;
