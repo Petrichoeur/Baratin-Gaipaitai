@@ -1,0 +1,60 @@
+:root {
+    --bg: #05070a;
+    --card-bg: #111418;
+    --accent: #00d4ff;
+    --neon-green: #39ff14;
+    --neon-purple: #bc13fe;
+    --text: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0; padding: 20px;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+header {
+    text-align: center; margin-bottom: 40px;
+    border-bottom: 1px solid var(--accent);
+    padding: 20px; width: 100%; max-width: 1000px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px; width: 100%; max-width: 1200px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    border-radius: 16px; padding: 25px;
+    display: flex; flex-direction: column;
+}
+
+.display {
+    background: #000; border-radius: 8px;
+    padding: 20px; margin: 20px 0; min-height: 80px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; font-family: 'Consolas', monospace;
+    color: var(--neon-green); border: 1px solid #333;
+}
+
+.pitch-section {
+    grid-column: 1 / -1;
+    background: linear-gradient(145deg, #1a1f25, #0a0c10);
+    border: 2px solid var(--neon-purple);
+    padding: 40px; border-radius: 20px; text-align: center;
+}
+
+button {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--text); padding: 12px;
+    border-radius: 8px; cursor: pointer; font-weight: bold;
+}
+
+button:hover { background: var(--text); color: var(--bg); }
+
+#pitch-text { font-size: 1.4rem; color: #fff; line-height: 1.6; }
