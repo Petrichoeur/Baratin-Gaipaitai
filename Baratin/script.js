@@ -1,39 +1,50 @@
-let bullshitData = {};
+let data = {};
 
-// Charger les données JSON
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        bullshitData = data;
-        // Génération initiale
-        Object.keys(data).forEach(key => generate(key));
+// Charger le JSON
+fetch('Baratin/data.json')
+    .then(res => res.json())
+    .then(json => {
+        data = json;
+        // Premier affichage
+        initAll();
     });
 
-function getRandomPart(categoryIndex, partIndex) {
-    const parts = bullshitData[categoryIndex][partIndex];
-    return parts[Math.floor(Math.random() * parts.length)];
+function initAll() {
+    ['phrase', 'innovation', 'job', 'tool', 'model'].forEach(type => generate(type));
+    generatePitch();
 }
 
 function generate(type) {
-    if (!bullshitData[type]) return;
-    let result = "";
-    for (let i = 0; i < 4; i++) {
-        result += getRandomPart(type, i) + " ";
-    }
-    document.getElementById(`display-${type}`).innerText = result.trim();
-    return result.trim();
+    if (!data[type]) return;
+    
+    const display = document.getElementById(`display-${type}`);
+    display.style.opacity = 0; // Petit effet de fade
+    
+    setTimeout(() => {
+        let result = data[type].map(list => list[Math.floor(Math.random() * list.length)]).join(' ');
+        display.innerText = result;
+        display.style.opacity = 1;
+    }, 150);
 }
 
 function generatePitch() {
-    const job = generate('job');
-    const tool = generate('tool');
-    const innovation = generate('innovation');
-    const phrase = generate('phrase');
-    const model = generate('model');
+    const p = document.getElementById('pitch-text');
+    p.style.opacity = 0;
 
-    const pitch = `Bonjour, je suis votre nouveau ${job}. 
-    Nous avons créé ${tool.split(' ')[0]}, une plateforme qui utilise ${innovation.toLowerCase()}. 
-    Notre mission ? ${phrase} Le tout propulsé par ${model}.`;
+    setTimeout(() => {
+        const j = data.job.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
+        const t = data.tool[0][Math.floor(Math.random()*data.tool[0].length)] + data.tool[1][Math.floor(Math.random()*data.tool[1].length)];
+        const i = data.innovation.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
+        const m = data.model.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
 
-    document.getElementById('pitch-text').innerText = pitch;
+        p.innerText = `Bonjour, je suis votre nouveau ${j}. Nous lançons ${t}, une solution révolutionnaire qui utilise ${i.toLowerCase()}. Propulsé par ${m}, nous disruptons le marché.`;
+        p.style.opacity = 1;
+    }, 200);
+}
+
+function copyToClipboard(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copié dans le presse-papier ! Prêt à disrupter.");
+    });
 }
