@@ -21,7 +21,7 @@ function generate(type) {
     display.style.opacity = 0; // Petit effet de fade
     
     setTimeout(() => {
-        let result = data[type].map(list => list[Math.floor(Math.random() * list.length)]).join(' ');
+        let result = data[type].map(list => list[Math.floor(Math.random() * list.length)]).join('');
         display.innerText = result;
         display.style.opacity = 1;
     }, 150);
@@ -32,10 +32,10 @@ function generatePitch() {
     p.style.opacity = 0;
 
     setTimeout(() => {
-        const j = data.job.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
+        const j = data.job.map(l => l[Math.floor(Math.random()*l.length)]).join('');
         const t = data.tool[0][Math.floor(Math.random()*data.tool[0].length)] + data.tool[1][Math.floor(Math.random()*data.tool[1].length)];
-        const i = data.innovation.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
-        const m = data.model.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
+        const i = data.innovation.map(l => l[Math.floor(Math.random()*l.length)]).join('');
+        const m = data.model.map(l => l[Math.floor(Math.random()*l.length)]).join('');
 
         p.innerText = `Bonjour, je suis  ${j}  de "Saucisson à l'A.I.". Nous lançons ${t}, une solution révolutionnaire qui utilise ${i.toLowerCase()}. Propulsé par ${m}, nous disruptons le marché.`;
         p.style.opacity = 1;
