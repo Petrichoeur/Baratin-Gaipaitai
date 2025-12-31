@@ -37,7 +37,7 @@ function generatePitch() {
         const i = data.innovation.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
         const m = data.model.map(l => l[Math.floor(Math.random()*l.length)]).join(' ');
 
-        p.innerText = `Bonjour, je suis votre nouveau ${j}. Nous lançons ${t}, une solution révolutionnaire qui utilise ${i.toLowerCase()}. Propulsé par ${m}, nous disruptons le marché.`;
+        p.innerText = `Bonjour, je suis  ${j}  de "Saucisson à l'A.I.". Nous lançons ${t}, une solution révolutionnaire qui utilise ${i.toLowerCase()}. Propulsé par ${m}, nous disruptons le marché.`;
         p.style.opacity = 1;
     }, 200);
 }
